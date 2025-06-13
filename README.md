@@ -1,11 +1,13 @@
 # Project Title
 
-Short description of your project.
+Sanctuary Webpage using HTML5, CSS3, JavaScript only.
 
 ## Screenshots
 
 ### Screenshot 1
-![Description of screenshot](path/to/screenshot1.png)
+
+![Home Page](\images\Home-Page.png)
 
 ### Screenshot 2
+
 ![Another screenshot](path/to/screenshot2.png)
