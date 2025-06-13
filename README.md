@@ -6,8 +6,17 @@ Sanctuary Webpage using HTML5, CSS3, JavaScript only.
 
 ### Screenshot 1
 
-![Home Page](\images\Home-Page.png)
+![Home Page](images/Home-Page.png)
 
 ### Screenshot 2
 
-![Another screenshot](path/to/screenshot2.png)
+![Membership Page](images/Membership.png)
+
+### Screenshot 3
+
+![Guide Page](images/Guide.png)
+
+### Screenshot 4
+
+![Login Page](images/Login.png)
+
