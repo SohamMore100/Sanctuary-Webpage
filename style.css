@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gotham", sans-serif;
+  background-color: #f9f4ec;
+  color: #242424;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 40px;
+}
+
+.left {
+  max-width: 50%;
+  text-align: center;
+  padding-left: 20%;
+}
+
+.left img.logo {
+  width: 403.2px;
+  height: 211.6px;
+  margin-bottom: 20px;
+}
+
+p.subtitle {
+  font-size: 24px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.buttons a {
+  padding: 15px 30px;
+  border: 1px solid #242424;
+  text-decoration: none;
+  color: #242424;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+.buttons a:hover {
+  background: #242424;
+  color: #fff;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  left: 965px;
+  width: 600px;
+  height: 700px;
+  background: url("Assets/Vector.jpg") no-repeat center center;
+  background-size: 90% 100%;
+  background-color: #f9f4ec;
+  background-blend-mode: multiply;
+  z-index: -1;
+}
+
+.top-right {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+}
+
+.top-right a {
+  padding: 10px 20px;
+  border: 1.5px solid #242424;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Gotham", sans-serif;
+  color: #242424;
+  letter-spacing: 1.5px;
+}
+
+.top-right a:hover {
+  background: #242424;
+  color: #fff;
+}
+
+.bottom {
+  margin-left: 25%;
+  font-size: 12px;
+  padding: 20px;
+  letter-spacing: 1px;
+}
+
+.bottom a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #242424;
+  font-family: "Gotham", sans-serif;
+}
+
+/* Responsive Breakpoints */
+
+@media (max-width: 1024px) {
+  .right {
+    display: none; 
+  }
+
+  .container {
+    justify-content: center; 
+    padding: 30px 20px;
+  }
+
+  .left {
+    max-width: 600px; 
+    padding: 10px 5%;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .left img.logo {
+    width: 80%; 
+    height: auto; 
+  }
+
+  p.subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
+    flex-direction: column; 
+    gap: 15px;
+    margin: 30px 0;
+  }
+
+  .buttons a {
+    width: 100%; 
+    text-align: center;
+  }
+
+  .top-right {
+    position: static; 
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  p.subtitle {
+    font-size: 18px;
+  }
+
+  .top-right {
+    position: static;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .top-right a {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+
+  .bottom a {
+    margin: 0 10px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 400px) {
+  .left img.logo {
+    width: 80%;
+    height: auto; 
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bottom {
+    font-size: 10px;
+    padding: 15px;
+  }
+}

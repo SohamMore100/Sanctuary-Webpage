@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+body {
+  font-family: "Gotham", sans-serif;
+  background-color: #f9f4ec;
+  color: #242424;
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.top-right {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+}
+.top-right a {
+  padding: 10px 20px;
+  border: 1.5px solid #242424;
+  text-decoration: none;
+  font-size: 13px;
+  font-family: "Gotham", sans-serif;
+  color: #242424;
+  letter-spacing: 1.5px;
+  display: inline-block;
+}
+.top-right a:hover {
+  background: #242424;
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: 100px;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.top-left {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+}
+
+.top-left .logo {
+  max-width: 120px;
+  height: auto;
+}
+
+header {
+  font-size: 20px;
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  margin: 100px 0 20px;
+  letter-spacing: 2px;
+}
+
+.actions {
+  margin: 60px 0 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-left: 45%;
+}
+
+.actions a {
+  border: 1px solid #242424;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #242424;
+  transition: background 0.3s;
+}
+
+.actions a:hover {
+  background: #242424;
+  color: #fff;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  background: url("Assets/Vector\ \(3\).png") no-repeat right;
+  background-size: cover;
+  z-index: 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+footer a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #242424;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+.accordion-item {
+  border-bottom: 1px solid #444;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 25px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion-header::after {
+  content: url("Assets/keyboard_arrow_down.png");
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s;
+}
+
+.accordion-header.active::after {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 8px 0 20px;
+  display: none;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  .top-left {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .top-left .logo {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .top-right {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  header {
+    font-size: 18px;
+    margin: 40px 0 20px;
+    text-align: center;
+  }
+
+  .actions {
+    margin: 30px 0;
+    justify-content: center;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actions a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 13px;
+  }
+
+  .background-img {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  .accordion-header {
+    font-size: 14px;
+  }
+
+  .accordion-content {
+    font-size: 13px;
+  }
+
+  footer {
+    margin-top: 30px;
+    font-size: 11px;
+  }
+
+  footer a {
+    margin: 0 8px;
+  }
+}

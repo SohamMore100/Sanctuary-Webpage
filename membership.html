@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership - Sanctory</title>
+    <link rel="stylesheet" href="membership.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-right">
+      <a href="/Login.html">MEMBERS LOGIN</a>
+    </div>
+
+    <div class="top-left">
+      <a href="/index.html">
+        <img src="Assets/Vector.png" alt="Sanctory Logo" class="logo" />
+      </a>
+    </div>
+
+    <div class="container">
+      <header>MEMBERSHIP INFORMATION</header>
+
+      <section class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            WHY AM I NOT ABLE TO REGISTER ON SANCTORY?
+          </button>
+          <div class="accordion-content">
+            Sanctory operates on an invitation-only basis. Occasionally, we
+            allow referrals from existing members to invite friends and family.
+            This quiet, considered approach allows us to plan demand in a way
+            that aligns with the natural pace of our producers, many of whom
+            work with traditional, small-scale methods. By doing so, we ensure
+            that quality remains consistent across every batch and each member
+            receives a product that is genuinely special, without any
+            compromise.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">HOW CAN I JOIN SANCTORY?</button>
+          <div class="accordion-content">
+            Currently, new members are accepted through invitations extended by
+            existing members or during specific open enrollment periods
+            announced by Sanctory. You can register your interest on our site,
+            and we’ll notify you if new spots become available.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            WHY ISN’T SANCTORY OPEN TO ALL?
+          </button>
+          <div class="accordion-content">
+            Our selective approach helps us maintain a high standard of curation
+            and quality. It allows producers to focus on craftsmanship rather
+            than volume and ensures each member experiences exclusivity and
+            uniqueness in every product.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            WHAT KIND OF PRODUCTS ARE AVAILABLE ON SANCTORY?
+          </button>
+          <div class="accordion-content">
+            Sanctory offers a range of artisanal goods including fine foods,
+            luxury wellness items, handcrafted lifestyle products, and rare
+            seasonal editions—all carefully sourced from master producers around
+            the world.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            ARE THE PRODUCTS ON SANCTORY VERY EXPENSIVE?
+          </button>
+          <div class="accordion-content">
+            Sanctory products reflect the craftsmanship, scarcity, and ethical
+            practices behind their creation. While prices vary, our focus is
+            always on fair compensation for producers and delivering unmatched
+            quality to members.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            CAN I ORDER THE SANCTORY PRODUCTS FROM A THIRD-PARTY WEBSITE?
+          </button>
+          <div class="accordion-content">
+            No, Sanctory products are exclusive to our platform and are not
+            distributed through third-party sellers. This ensures authenticity
+            and maintains our direct relationship between producer and member.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            ONCE I JOIN SANCTORY, WILL I BE ABLE TO GET ALL TYPES OF PRODUCTS
+            FROM EVERY FAMOUS PRODUCER?
+          </button>
+          <div class="accordion-content">
+            While membership grants you access to our full catalog, some items
+            may be seasonal, limited in quantity, or regionally exclusive based
+            on producer capacity. Notifications and priority access are provided
+            to ensure fair availability.
+          </div>
+        </div>
+      </section>
+
+      <div class="actions">
+        <a href="/index.html">RETURN TO HOME</a>
+        <a href="/Guide.html">PRODUCER GUIDE</a>
+      </div>
+    </div>
+
+    <div class="background-img"></div>
+
+    <footer>
+      <a href="#">INSTAGRAM</a>
+      <a href="#">LINKEDIN</a>
+    </footer>
+
+    <script>
+      const headers = document.querySelectorAll(".accordion-header");
+
+      headers.forEach((header) => {
+        header.addEventListener("click", () => {
+          const openItem = document.querySelector(".accordion-header.active");
+
+          if (openItem && openItem !== header) {
+            openItem.classList.remove("active");
+            openItem.nextElementSibling.classList.remove("show");
+          }
+
+          header.classList.toggle("active");
+          header.nextElementSibling.classList.toggle("show");
+        });
+      });
+    </script>
+  </body>
+</html>
