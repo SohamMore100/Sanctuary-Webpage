@@ -3,31 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sanctory</title>
-    <link rel="stylesheet" href="guide.css" />
+    <title>Sanctory – Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @font-face {
+        font-family: "Hero";
+        src: url("/Fonts/Hero.otf") format("opentype");
+      }
+
+      body {
+        font-family: "Hero", sans-serif;
+      }
+
+      .bg-right-img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 100px;
+        width: 550px;
+        height: 100%;
+        background: url("/Assets/image 28.png") no-repeat top right;
+        background-size: contain;
+        filter: brightness(1.5) contrast(200%);
+        mix-blend-mode: multiply;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      @media (max-width: 1024px) {
+        .bg-right-img::before {
+          display: none;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <!-- Header Section -->
-    <header class="top-bar">
-      <a href="index.html" class="logo">
-        <img src="/Assets/Vector.png" alt="Sanctory logo" />
+
+  <body
+    class="bg-[#f8f4ef] text-[#242424] relative overflow-x-hidden px-5 bg-right-img"
+  >
+    <!-- Mobile Background Image -->
+    <div
+      class="md:hidden absolute top-0 left-0 w-full h-[300px] bg-no-repeat bg-bottom bg-contain opacity-80 z-0 pointer-events-none"
+    ></div>
+
+    <!-- Header -->
+    <header class="relative z-10 flex items-center justify-between mt-6 mb-12">
+      <a href="/index.html">
+        <img
+          src="/Assets/Vector.png"
+          alt="Sanctory Logo"
+          class="h-[60px] w-auto"
+        />
       </a>
-      <a href="Login.html" class="login-btn">MEMBERS LOGIN</a>
+      <a
+        href="/Login.html"
+        class="border-2 border-[#242424] px-7 py-3 text-xs font-bold tracking-wider hover:bg-[#242424] hover:text-white transition"
+      >
+        MEMBERS LOGIN
+      </a>
     </header>
 
     <!-- Main Content -->
-    <main class="content">
-      <!-- Intro Section -->
-      <section class="intro">
-        <h1>FOR THE ONES WHO MAKE</h1>
-        <blockquote>
-          <p>
+    <main class="relative z-10 space-y-16 px-4 sm:px-8 max-w-4xl">
+      <!-- Intro -->
+      <section class="text-center">
+        <h1
+          class="text-xl lg:text-2xl sm:text-3xl font-bold tracking-widest uppercase mb-8"
+        >
+          For the Ones Who Make
+        </h1>
+
+        <blockquote
+          class="relative pl-10 text-[#555] text-base max-w-3xl"
+        >
+          <img
+            src="/Assets/quots.png"
+            alt="Quote icon"
+            class="absolute left-0 top-0 w-8 h-7"
+          />
+          <p class="mb-4 leading-relaxed">
             We are not here to commodify your craft. We are here to understand
             it, protect it, and share its story with our members, who will
             appreciate and celebrate your work with the same care and reverence
             that you bring to it.
           </p>
-          <p>
+          <p class="leading-relaxed">
             At Sanctory, we believe the finest things are not mass-produced —
             they are grown, harvested, made and refined over time, often by
             hands that have done so for generations. If you are a grower,
@@ -37,15 +97,17 @@
         </blockquote>
       </section>
 
-      <!-- What We Look For Section -->
-      <section class="info">
-        <h2>WHAT WE LOOK FOR</h2>
-        <p>
+      <!-- What We Look For -->
+      <section class="max-w-3xl">
+        <h2 class="text-lg font-bold border-t-2 border-[#ccc] pt-6 mb-4">
+          WHAT WE LOOK FOR
+        </h2>
+        <p class="text-[#555] mb-4">
           We work with producers whose values align with ours — who believe in
           process over pace, quality over scale, and stories over marketing. We
           do not seek perfection. We seek truth.
         </p>
-        <ul>
+        <ul class="list-disc pl-6 text-[#555] space-y-2">
           <li>Products made without industrial shortcuts</li>
           <li>Traditional or generational knowledge in practice</li>
           <li>Small-batch, seasonal or naturally limited production</li>
@@ -56,53 +118,78 @@
         </ul>
       </section>
 
-      <!-- What You Can Expect Section -->
-      <section class="info">
-        <h2>WHAT YOU CAN EXPECT</h2>
-        <p>
+      <!-- What You Can Expect -->
+      <section class="max-w-3xl">
+        <h2 class="text-lg font-bold border-t border-[#ccc] pt-6 mb-4">
+          WHAT YOU CAN EXPECT
+        </h2>
+        <p class="text-[#555] mb-4">
           Sanctory is not a transactional platform. It’s a relationship. We work
           with a small circle of producers and make no demands on volume or
           pricing that would compromise your integrity.
         </p>
-        <ul>
+        <ul class="list-disc pl-6 text-[#555] space-y-2">
           <li>Slow, respectful sourcing cycles</li>
           <li>Transparent pricing and producer-first margins</li>
           <li>No discounts or bundling that dilute value</li>
           <li>Support in telling your story truthfully</li>
           <li>A global but intimate audience that listens</li>
         </ul>
-        <p>
+        <p class="text-[#555] mt-4">
           You will not find your work placed next to a dozen competitors. In
           every category, we shortlist no more than two producers.
         </p>
       </section>
 
       <!-- Contact Section -->
-      <section class="contact-box">
-        <h2>REACH OUT TO SANCTORY</h2>
-        <p>If you feel your practice belongs here, we would love to listen.</p>
-        <ul class="contact-list">
-          <li>The name of your farm, studio, distillery or practice</li>
-          <li>What you make</li>
-          <li>How you make it</li>
-          <li>Where you are based</li>
-          <li>A few photos or notes, if you like</li>
-          <li>How to reach you</li>
-        </ul>
-        <strong>WE READ EVERY MESSAGE WITH CARE.</strong>
+      <section
+        class="border border-[#242424] p-8 max-w-2xl text-center"
+      >
+        <h2 class="text-lg font-bold uppercase tracking-wide mb-4">
+          Reach Out to Sanctory
+        </h2>
+        <p class="text-[#555] mb-4">
+          If you feel your practice belongs here, we would love to listen.
+        </p>
+        <div class="text-left text-[#555]">
+          <p class="mb-2 lg:pl-24">You may share:</p>
+          <ul class="list-disc list-inside space-y-2 mb-6 lg:pl-28">
+            <li>The name of your farm, studio, distillery or practice</li>
+            <li>What you make</li>
+            <li>How you make it</li>
+            <li>Where you are based</li>
+            <li>A few photos or notes, if you like</li>
+            <li>How to reach you</li>
+          </ul>
+        </div>
+        <strong class="block mt-6 text-sm font-semibold tracking-wider">
+          WE READ EVERY MESSAGE WITH CARE.
+        </strong>
       </section>
-
-      <!-- Navigation Buttons -->
-      <div class="buttons">
-        <a href="/index.html"><button>RETURN TO HOME</button></a>
-        <a href="/membership.html"><button>EXPLORE MEMBERSHIP</button></a>
-      </div>
     </main>
 
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-6 justify-center mt-16 px-4">
+      <a
+        href="/index.html"
+        class="border border-[#242424] px-6 py-3 text-xs tracking-wider hover:bg-[#242424] hover:text-white transition text-center"
+      >
+        RETURN TO HOME
+      </a>
+      <a
+        href="/membership.html"
+        class="border border-[#242424] px-6 py-3 text-xs tracking-wider hover:bg-[#242424] hover:text-white transition text-center"
+      >
+        EXPLORE MEMBERSHIP
+      </a>
+    </div>
+
     <!-- Footer -->
-    <footer>
-      <a href="#">INSTAGRAM</a>
-      <a href="#">LINKEDIN</a>
+    <footer
+      class="text-center text-xs font-bold tracking-wider mt-16 pb-16 relative z-10"
+    >
+      <a href="#" class="mx-4 hover:underline">INSTAGRAM</a>
+      <a href="#" class="mx-4 hover:underline">LINKEDIN</a>
     </footer>
   </body>
 </html>

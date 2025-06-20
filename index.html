@@ -4,30 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanctory</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Font -->
+    <style>
+      @font-face {
+        font-family: "Hero";
+        src: url("/Fonts/Hero Light.otf") format("truetype");
+        font-weight: 300;
+      }
+
+      @font-face {
+        font-family: "Hero";
+        src: url("/Fonts/Hero.otf") format("truetype");
+        font-weight: 900;
+      }
+
+      body {
+        font-family: "Hero Light", "Hero", sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <div class="top-right">
-      <a href="/Login.html">MEMBERS LOGIN</a>
+
+  <body
+    class="bg-[#f9f4ec] text-[#242424] min-h-screen flex flex-col justify-between overflow-hidden"
+  >
+    <!-- Top Right Login -->
+    <div class="absolute top-9 right-6 lg:right-11 z-10">
+      <a
+        href="/Login.html"
+        class="px-6 py-3 tracking-[.10em] font-bold border-2 border-[#242424] text-xs hover:bg-[#242424] hover:text-white transition duration-300"
+      >
+        MEMBERS LOGIN
+      </a>
     </div>
-    <div class="container">
-      <div class="left">
-        <img src="/Assets/Vector.png" alt="Sanctory logo" class="logo" />
-        <p class="subtitle">FINE THINGS FOR FINE PEOPLE</p>
-        <div class="buttons">
-          <a href="/membership.html">EXPLORE MEMBERSHIP</a>
-          <a href="/Guide.html">PRODUCER GUIDE</a>
+
+    <!-- Main Content -->
+    <main
+      class="flex flex-col lg:flex-row justify-between items-center h-full p-6 lg:p-16 relative"
+    >
+      <!-- Left Content -->
+      <div
+        class="text-center lg:text-left max-w-2xl w-full lg:pl-[18%] pt-[55%] lg:pt-[5%]"
+      >
+        <img
+          src="/Assets/Vector.png"
+          alt="Sanctory Logo"
+          class="w-[280px] sm:w-[300px] lg:w-[400px] h-auto mx-auto lg:mx-0 lg:ml-4 mb-6"
+        />
+
+        <p
+          class="text-base text-center font-medium sm:text-xl lg:text-2xl mb-6 tracking-wide uppercase"
+        >
+          Fine Things For Fine People
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+        >
+          <a
+            href="/membership.html"
+            class="px-6 py-3 tracking-wider text-sm font-semibold border border-[#242424] hover:bg-[#242424] hover:text-white transition duration-300 text-center"
+          >
+            EXPLORE MEMBERSHIP
+          </a>
+          <a
+            href="/Guide.html"
+            class="px-6 py-3 tracking-wider text-sm font-semibold border border-[#242424] hover:bg-[#242424] hover:text-white transition duration-300 text-center"
+          >
+            PRODUCER GUIDE
+          </a>
         </div>
       </div>
-      <div class="right"></div>
-    </div>
-    <div class="bottom">
-      <a href="#">INSTAGRAM</a>
-      <a href="#">LINKEDIN</a>
-    </div>
+
+      <!-- Background Image -->
+      <div
+        class="hidden lg:block absolute top-0 right-1 w-[25rem] h-[700px] bg-center bg-cover z-[-1]"
+        style="
+          background-image: url('/Assets/Vector.jpg');
+          background-color: #f9f4ec;
+          background-blend-mode: multiply;
+        "
+      ></div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="text-[12px] font-extrabold tracking-widest text-[#242424] flex justify-center gap-8 py-6 mt-[50%] lg:pr-[30%]"
+    >
+      <a href="#" class="hover:underline transition">INSTAGRAM</a>
+      <a href="#" class="hover:underline transition">LINKEDIN</a>
+    </footer>
   </body>
 </html>

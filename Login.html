@@ -4,49 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanctory Login</title>
-    <link rel="stylesheet" href="login.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @font-face {
+        font-family: "Hero";
+        src: url("/Fonts/Hero.otf") format("opentype");
+      }
+
+      body {
+        font-family: "Hero", sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <div class="top-left">
-      <a href="index.html">
-        <img src="Assets/Vector.png" alt="Sanctory Logo" class="logo" />
+
+  <body
+    class="bg-[#f9f4ec] text-[#242424] min-h-screen h-screen overflow-hidden relative px-4 sm:px-6"
+  >
+    <!-- Top Left Logo -->
+    <div class="fixed top-8 left-8 z-20">
+      <a href="/index.html">
+        <img
+          src="/Assets/Vector.png"
+          alt="Sanctory Logo"
+          class="w-[110px] md:w-[130px]"
+        />
       </a>
     </div>
 
-    <div class="top-right">
-      <a href="index.html">RETURN TO HOME</a>
+    <!-- Top Right Navigation Button -->
+    <div class="fixed top-10 right-5 z-20">
+      <a
+        href="/index.html"
+        class="border-2 border-[#242424] px-3 py-3 lg:px-6 py-3 text-xs font-semibold tracking-wider hover:bg-[#242424] hover:text-white transition duration-300"
+      >
+        RETURN TO HOME
+      </a>
     </div>
 
-    <div class="login-box">
-      <h1>WELCOME TO SANCTORY</h1>
-      <form>
+    <!-- Login Box -->
+    <div
+      class="max-w-[450px] mx-auto mt-[55%] lg:mt-40 px-16 py-12 border border-[#242424] text-center z-10 relative"
+    >
+      <h1 class="text-[22px] tracking-[0.10em] uppercase mb-10">
+        Welcome to Sanctory
+      </h1>
+
+      <form class="flex flex-col gap-8">
         <input
           type="text"
-          id="membership"
           name="membership"
           placeholder="MEMBERSHIP ID"
+          class="w-full border-b border-[#242424] bg-transparent text-xs placeholder:font-bold placeholder:tracking-wider outline-none py-1"
         />
         <input
           type="password"
-          id="password"
           name="password"
           placeholder="PASSWORD"
+          class="w-full border-b border-[#242424] bg-transparent text-xs placeholder:font-bold placeholder:tracking-wider text-[#555] outline-none py-1"
         />
 
-        <button type="submit">LOGIN</button>
+        <button
+          type="submit"
+          class="mt-7 border-2 border-[#242424] lg:w-[50%] lg:ml-20 px-6 py-3 text-xs tracking-widest font-semibold hover:bg-[#242424] hover:text-white transition"
+        >
+          LOGIN
+        </button>
       </form>
-      <a href="#" class="forgot">FORGOT PASSWORD</a>
+
+      <a href="#" class="block cursor-pointer mt-8 text-xs font-bold tracking-[.1em] text-[#555]">
+        FORGOT PASSWORD
+      </a>      
     </div>
 
-    <div class="bg-illustration"></div>
+    <!-- Background Illustration -->
+    <div
+      class="hidden lg:block absolute top-[35%] left-0 w-full h-[300px] bg-no-repeat bg-bottom bg-contain opacity-90 z-0 pointer-events-none"
+      style="
+        background-image: url('/Assets/column-8034375 2.jpg');
+        background-color: #f9f4ec;
+        background-blend-mode: multiply;
+      "
+    ></div>
 
-    <footer>
-      <a href="#">INSTAGRAM</a>
-      <a href="#">LINKEDIN</a>
+    <!-- Footer -->
+    <footer class="text-center text-[11px] font-bold tracking-wider mt-20 pb-16 relative z-10">
+      <a href="#" class="mx-4 hover:underline">INSTAGRAM</a>
+      <a href="#" class="mx-4 hover:underline">LINKEDIN</a>
     </footer>
   </body>
 </html>

@@ -4,125 +4,183 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Membership - Sanctory</title>
-    <link rel="stylesheet" href="membership.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="top-right">
-      <a href="/Login.html">MEMBERS LOGIN</a>
-    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @font-face {
+        font-family: "Hero";
+        src: url("/Fonts/Hero.otf") format("opentype");
+      }
 
-    <div class="top-left">
-      <a href="/index.html">
-        <img src="Assets/Vector.png" alt="Sanctory Logo" class="logo" />
+      body {
+        font-family: "Hero", sans-serif;
+      }
+
+      .accordion-content {
+        display: none;
+      }
+
+      .accordion-header.active::after {
+        transform: rotate(180deg);
+      }
+
+      .accordion-header::after {
+        content: url("/Assets/keyboard_arrow_down.png");
+        position: absolute;
+        right: 0;
+        transition: transform 0.3s;
+      }
+
+      .accordion-content.show {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-[#f9f4ec] text-[#242424] min-h-screen relative overflow-x-hidden"
+  >
+    <!-- Top Right Login -->
+    <div class="absolute top-10 lg:top-9 right-4 lg:right-11 z-10">
+      <a
+        href="/Login.html"
+        class="px-3 lg:px-6 py-3 text-xs font-semibold tracking-widest border-2 border-[#242424] hover:bg-[#242424] hover:text-white transition"
+      >
+        MEMBERS LOGIN
       </a>
     </div>
 
-    <div class="container">
-      <header>MEMBERSHIP INFORMATION</header>
+    <!-- Logo Top Left -->
+    <div class="absolute top-6 left-6 lg:top-10 lg:left-10 z-10">
+      <a href="/index.html">
+        <img src="/Assets/Vector.png" alt="Sanctory Logo" class="w-[115px]" />
+      </a>
+    </div>
 
-      <section class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header">
+    <!-- Right Background Image -->
+    <div
+      class="hidden lg:block absolute top-0 right-0 w-[38%] h-[100%] bg-no-repeat bg-cover bg-right z-0"
+      style="
+        background-image: url('/Assets/Layer_1.jpg');
+        background-color: #f9f4ec;
+        background-blend-mode: multiply;
+      "
+    ></div>
+
+    <!-- Content Container -->
+    <div class="relative z-10 max-w-5xl lg:ml-[100px] pt-[140px] px-4">
+      <h1 class="text-xl font-bold lg:font-medium lg:text-3xl tracking-widest uppercase">MEMBERSHIP INFORMATION</h1>
+
+      <!-- Accordion Section -->
+      <section class="space-y-4">
+        <!-- Item -->
+        <div class="border-b border-[#242424] pb-2">
+          <button
+            class="accordion-header tracking-wider relative w-full text-left font-bold text-sm py-6 pr-6"
+          >
             WHY AM I NOT ABLE TO REGISTER ON SANCTORY?
           </button>
-          <div class="accordion-content">
+          <div class="accordion-content text-xs tracking-wider pt-2">
             Sanctory operates on an invitation-only basis. Occasionally, we
             allow referrals from existing members to invite friends and family.
             This quiet, considered approach allows us to plan demand in a way
             that aligns with the natural pace of our producers, many of whom
             work with traditional, small-scale methods. By doing so, we ensure
             that quality remains consistent across every batch and each member
-            receives a product that is genuinely special, without any
-            compromise.
+            receives a product that is genuinely special, without any compromise
           </div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion-header">HOW CAN I JOIN SANCTORY?</button>
-          <div class="accordion-content">
-            Currently, new members are accepted through invitations extended by
-            existing members or during specific open enrollment periods
-            announced by Sanctory. You can register your interest on our site,
-            and we’ll notify you if new spots become available.
+        <div class="border-b border-[#242424] pb-2">
+          <button
+            class="accordion-header tracking-wider relative w-full text-left font-bold text-sm py-6 pr-6"
+          >
+            HOW CAN I JOIN SANCTORY?
+          </button>
+          <div class="accordion-content text-xs pt-2">
+            Currently, new members are accepted through invitations...
           </div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion-header">
+        <div class="border-b border-[#242424] pb-2">
+          <button
+            class="accordion-header tracking-wider relative w-full text-left font-bold text-sm py-6 pr-6"
+          >
             WHY ISN’T SANCTORY OPEN TO ALL?
           </button>
-          <div class="accordion-content">
-            Our selective approach helps us maintain a high standard of curation
-            and quality. It allows producers to focus on craftsmanship rather
-            than volume and ensures each member experiences exclusivity and
-            uniqueness in every product.
+          <div class="accordion-content text-xs pt-2">
+            Our selective approach helps us maintain...
           </div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion-header">
+        <div class="border-b border-[#242424] pb-2">
+          <button
+            class="accordion-header tracking-wider relative w-full text-left font-bold text-sm py-6 pr-6"
+          >
             WHAT KIND OF PRODUCTS ARE AVAILABLE ON SANCTORY?
           </button>
-          <div class="accordion-content">
-            Sanctory offers a range of artisanal goods including fine foods,
-            luxury wellness items, handcrafted lifestyle products, and rare
-            seasonal editions—all carefully sourced from master producers around
-            the world.
+          <div class="accordion-content text-xs pt-2">
+            Sanctory offers a range of artisanal goods including fine foods...
           </div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion-header">
+        <div class="border-b border-[#242424] pb-2">
+          <button
+            class="accordion-header tracking-wider relative w-full text-left font-bold text-sm py-6 pr-6"
+          >
             ARE THE PRODUCTS ON SANCTORY VERY EXPENSIVE?
           </button>
-          <div class="accordion-content">
-            Sanctory products reflect the craftsmanship, scarcity, and ethical
-            practices behind their creation. While prices vary, our focus is
-            always on fair compensation for producers and delivering unmatched
-            quality to members.
+          <div class="accordion-content text-xs pt-2">
+            Sanctory products reflect the craftsmanship...
           </div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion-header">
+        <div class="border-b border-[#242424] pb-2">
+          <button
+            class="accordion-header tracking-wider relative w-full text-left font-bold text-sm py-6 pr-6"
+          >
             CAN I ORDER THE SANCTORY PRODUCTS FROM A THIRD-PARTY WEBSITE?
           </button>
-          <div class="accordion-content">
-            No, Sanctory products are exclusive to our platform and are not
-            distributed through third-party sellers. This ensures authenticity
-            and maintains our direct relationship between producer and member.
+          <div class="accordion-content text-xs pt-2">
+            No, Sanctory products are exclusive to our platform...
           </div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion-header">
+        <div class="border-b border-[#242424] pb-2">
+          <button
+            class="accordion-header tracking-wider relative w-full text-left font-bold text-sm py-6 pr-6"
+          >
             ONCE I JOIN SANCTORY, WILL I BE ABLE TO GET ALL TYPES OF PRODUCTS
             FROM EVERY FAMOUS PRODUCER?
           </button>
-          <div class="accordion-content">
-            While membership grants you access to our full catalog, some items
-            may be seasonal, limited in quantity, or regionally exclusive based
-            on producer capacity. Notifications and priority access are provided
-            to ensure fair availability.
+          <div class="accordion-content text-xs pt-2">
+            While membership grants you access to our full catalog...
           </div>
         </div>
       </section>
 
-      <div class="actions">
-        <a href="/index.html">RETURN TO HOME</a>
-        <a href="/Guide.html">PRODUCER GUIDE</a>
+      <!-- Action Buttons -->
+      <div class="mt-16 ml-[25%] lg:ml-[45%] flex flex-wrap gap-8 justify-start">
+        <a
+          href="/index.html"
+          class="border border-[#242424] font-semibold px-6 py-3 text-sm tracking-wider hover:bg-[#242424] hover:text-white transition"
+        >
+          RETURN TO HOME
+        </a>
+        <a
+          href="/Guide.html"
+          class="border border-[#242424] font-semibold px-6 py-3 text-sm tracking-wide hover:bg-[#242424] hover:text-white transition"
+        >
+          PRODUCER GUIDE
+        </a>
       </div>
     </div>
 
-    <div class="background-img"></div>
-
-    <footer>
-      <a href="#">INSTAGRAM</a>
-      <a href="#">LINKEDIN</a>
+    <!-- Footer -->
+    <footer
+      class="relative z-10 text-xs font-bold tracking-wider text-center mt-12 pb-8"
+    >
+      <a href="#" class="mx-4 hover:underline">INSTAGRAM</a>
+      <a href="#" class="mx-4 hover:underline">LINKEDIN</a>
     </footer>
 
     <script>
@@ -130,13 +188,11 @@
 
       headers.forEach((header) => {
         header.addEventListener("click", () => {
-          const openItem = document.querySelector(".accordion-header.active");
-
-          if (openItem && openItem !== header) {
-            openItem.classList.remove("active");
-            openItem.nextElementSibling.classList.remove("show");
+          const open = document.querySelector(".accordion-header.active");
+          if (open && open !== header) {
+            open.classList.remove("active");
+            open.nextElementSibling.classList.remove("show");
           }
-
           header.classList.toggle("active");
           header.nextElementSibling.classList.toggle("show");
         });
